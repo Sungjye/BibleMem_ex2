@@ -34,8 +34,25 @@ public class cWordDB_A
         "아멘"
     };
 
+    public static string[] Deuteronomy_C8_KRV ={
+        "너를", "낮추시며", "너로", "주리게", "하시며",
+        "또", "너도", "알지", "못하며", "네", "조상들도", "알지", "못하던", 
+        "만나를", "네게", "먹이신", "것은",
+        "사람이", "떡으로만", "사는", "것이", "아니요",
+        "여호와의", "입에서", "나오는", "모든", "말씀으로", "사는", "줄을",
+        "너로", "알게하려", "하심이니라."
+    };
 
-    public static string[] targetWordSet = Luke_C9; //Beatitudes;
+    public static string[] Deuteromony_C8_NASB ={
+        "HashSet", "humbled", "you", "and", "let", "you", "be", "hungry,",
+        "and", "fed", "you", "with", "manna", "which", "you", "did", "not", "know,", 
+        "nor", "did", "your", "fathers", "know,",
+        "that", "He", "might", "make", "you", "understand",  
+        "that", "man", "does", "not", "live", "by", "bread", "alone,",
+        "but", "man", "lives", "by", "everything", "that", "proceeds", "out", "of", "the", "mouth", "of", "the", "Lord."
+    };
+
+    public static string[] targetWordSet = Deuteromony_C8_NASB; //Luke_C9; //Beatitudes;
 
     public static string GetRandomWord()
     {
