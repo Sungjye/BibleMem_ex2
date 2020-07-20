@@ -44,7 +44,7 @@ public class cWordDB_A
     };
 
     public static string[] Deuteromony_C8_NASB ={
-        "HashSet", "humbled", "you", "and", "let", "you", "be", "hungry,",
+        "He", "humbled", "you", "and", "let", "you", "be", "hungry,",
         "and", "fed", "you", "with", "manna", "which", "you", "did", "not", "know,", 
         "nor", "did", "your", "fathers", "know,",
         "that", "He", "might", "make", "you", "understand",  
@@ -52,7 +52,9 @@ public class cWordDB_A
         "but", "man", "lives", "by", "everything", "that", "proceeds", "out", "of", "the", "mouth", "of", "the", "Lord."
     };
 
-    public static string[] targetWordSet = Deuteromony_C8_NASB; //Luke_C9; //Beatitudes;
+    public static string[] targetWordSet = Beatitudes;//Deuteromony_C8_NASB; //Luke_C9; //Beatitudes;
+
+    public static int wordIndex = 0;
 
     public static string GetRandomWord()
     {
@@ -61,6 +63,28 @@ public class cWordDB_A
         randomIndex = Random.Range(0, targetWordSet.Length);
 
         return targetWordSet[randomIndex];
+    }
+
+    public static string GetWordInOrder()
+    {
+        if( wordIndex < targetWordSet.Length )
+        {
+            return targetWordSet[wordIndex++];
+        }else
+        {
+            return null;
+        }
+
+        /* 7/20/2020
+        좀 뜬금 없지만., Surely I have to be familier with the "foreach" syntax.
+        
+        string value = "Hello";
+        foreach(char c in value)
+        {
+            Console.WriteLine(c);
+        }
+        */
+
     }
 
 }

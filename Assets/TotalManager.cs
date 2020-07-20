@@ -37,11 +37,33 @@ public class TotalManager : MonoBehaviour
         // Text 오브젝트로 단어 내용을 보여주기 위해서 추가하고 변경..
         //cWord word = new cWord(cWordDB_A.GetRandomWord());
         //cWord word = new cWord(cWordDB_A.GetRandomWord(), textObjGenerator.GenerateTextObject());
-        cWord word = new cWord(cWordDB_A.GetRandomWord(), textObjectGenB.GenerateTextObject());
+        
+        // 순서대로 단어를 보여주기 위해. 7/20
+        
+        string oneWord = cWordDB_A.GetWordInOrder();
+
+        if( oneWord != null )
+        {
+            cWord word = new cWord(oneWord, textObjectGenB.GenerateTextObject() );
+            
+            Debug.Log(word.targetWord);
+            
+            words.Add(word);
+
+        }else // If the sentence is ended.
+        {
+            // Do nothing. 
+            Debug.Log("End of the sentence!");
+        }
+
+
+        /*
+        //cWord word = new cWord(cWordDB_A.GetRandomWord(), textObjectGenB.GenerateTextObject());        
 
         Debug.Log(word.targetWord);
 
-        words.Add(word);        
+        words.Add(word);
+        */        
     }
 
     public void TypeLetter(char _letter)
